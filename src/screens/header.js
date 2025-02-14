@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, IconButton, Box, Menu, MenuItem, Hidden } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Skywaylogo from "../image_placeholder/alwasit.png";
+import Skywaylogo from "../image_placeholder/skywayimg.jpeg";
 
 const Header = () => {
     const navigate = useNavigate();

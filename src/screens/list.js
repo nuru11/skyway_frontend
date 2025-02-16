@@ -261,7 +261,7 @@ const [data, setData] = React.useState('');
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://skywayapi.ntechagent.com/tt?agentname=${agentName}`);
+        const response = await fetch(`https://skywayapi.ntechagent.com/tt?agentname=${agentName}`);
         const result = await response.json();
         if (result.status === 'ok') {
           console.log(result.data); // Log the fetched data for debugging
@@ -295,7 +295,7 @@ const [data, setData] = React.useState('');
     const confirmDelete = window.confirm('Are you sure you want to delete this item?');
     if (confirmDelete) {
       try {
-        const response = await fetch(`http://skywayapi.ntechagent.com/tget-images/${id}?agentname=${agentName}`, {
+        const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${id}?agentname=${agentName}`, {
           method: 'DELETE',
         });
         const result = await response.json();
@@ -369,7 +369,7 @@ const [message, setMessage] = React.useState('');
 //   // }
 
 //   try {
-//     const response = await fetch('http://skywayapi.ntechagent.com/deletemultipeapplicants', {
+//     const response = await fetch('https://skywayapi.ntechagent.com/deletemultipeapplicants', {
 //       method: 'DELETE',
 //       headers: {
 //         'Content-Type': 'application/json',
@@ -411,7 +411,7 @@ const handleDeleteImages = async (e) => {
   if (confirmDelete) {
 
   try {
-    const response = await fetch(`http://skywayapi.ntechagent.com/deletemultipeapplicants?agentname=${agentName}`, {
+    const response = await fetch(`https://skywayapi.ntechagent.com/deletemultipeapplicants?agentname=${agentName}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -618,7 +618,7 @@ const handleDeleteImages = async (e) => {
 
 
     try {
-      const response = await fetch(`http://skywayapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
+      const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -700,7 +700,7 @@ const handleDeleteImages = async (e) => {
 
 
     try {
-      const response = await fetch(`http://skywayapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
+      const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -751,7 +751,7 @@ const handleDeleteImages = async (e) => {
 
 
     try {
-      const response = await fetch(`http://skywayapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
+      const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

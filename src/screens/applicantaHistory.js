@@ -17,7 +17,7 @@
 //         const fetchApplicants = async () => {
 //             try {
 //                 // Uncomment the following lines to fetch real data.
-//                 const response = await fetch(`http://skywayapi.ntechagent.com/applicantshistory?agentname=${agentName}`);
+//                 const response = await fetch(`https://skywayapi.ntechagent.com/applicantshistory?agentname=${agentName}`);
 //                 if (!response.ok) {
 //                     throw new Error('Network response was not ok');
 //                 }
@@ -303,7 +303,7 @@ const ApplicantsList = () => {
     useEffect(() => {
         const fetchApplicants = async () => {
             try {
-                const response = await fetch(`http://skywayapi.ntechagent.com/applicantshistory?agentname=${agentName}`);
+                const response = await fetch(`https://skywayapi.ntechagent.com/applicantshistory?agentname=${agentName}`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -389,7 +389,7 @@ const ApplicantsList = () => {
         const confirmDelete = window.confirm('Are you sure you want to delete this Applicant?');
         if (confirmDelete) {
           try {
-            const response = await fetch(`http://skywayapi.ntechagent.com/deleteapplicanthistory/${id}?agentname=${agentName}`, {
+            const response = await fetch(`https://skywayapi.ntechagent.com/deleteapplicanthistory/${id}?agentname=${agentName}`, {
               method: 'DELETE',
             });
             const result = await response.json();

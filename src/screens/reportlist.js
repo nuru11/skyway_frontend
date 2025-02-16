@@ -158,7 +158,7 @@ export default function StickyHeadTable() {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://skywayapi.ntechagent.com/tt?agentname=${agentName}`);
+        const response = await fetch(`https://skywayapi.ntechagent.com/tt?agentname=${agentName}`);
         const result = await response.json();
         if (result.status === 'ok') {
           console.log(result.data);
@@ -191,7 +191,7 @@ export default function StickyHeadTable() {
     const confirmDelete = window.confirm('Are you sure you want to delete this item?');
     if (confirmDelete) {
       try {
-        const response = await fetch(`http://skywayapi.ntechagent.com/tget-images/${id}?agentname=${agentName}`, {
+        const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${id}?agentname=${agentName}`, {
           method: 'DELETE',
         });
         const result = await response.json();
@@ -224,7 +224,7 @@ export default function StickyHeadTable() {
 
     if (confirmDelete) {
       try {
-        const response = await fetch(`http://skywayapi.ntechagent.com/deletemultipeapplicants?agentname=${agentName}`, {
+        const response = await fetch(`https://skywayapi.ntechagent.com/deletemultipeapplicants?agentname=${agentName}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
@@ -267,7 +267,7 @@ const handleDeleteAndMoveIntoHistoryTable = async (e) => {
 
   if (confirmDelete) {
       try {
-          const response = await fetch(`http://skywayapi.ntechagent.com/movetohistorytable?agentname=${agentName}`, {
+          const response = await fetch(`https://skywayapi.ntechagent.com/movetohistorytable?agentname=${agentName}`, {
               method: 'DELETE',
               headers: {
                   'Content-Type': 'application/json',
@@ -296,7 +296,7 @@ const handleDeleteAndMoveIntoHistoryTable = async (e) => {
     editData.finished = false;
 
     try {
-      const response = await fetch(`http://skywayapi.ntechagent.com/tget-images/${id}?agentname=${agentName}`, {
+      const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${id}?agentname=${agentName}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

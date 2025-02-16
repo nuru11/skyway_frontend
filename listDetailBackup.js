@@ -435,7 +435,7 @@ const DetailPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://skywayapi.ntechagent.com/detail/tget-images/${id}`);
+        const response = await fetch(`https://skywayapi.ntechagent.com/detail/tget-images/${id}`);
         const result = await response.json();
         if (result.status === 'ok') {
           setData(result.data); // Ensure this is an array
@@ -475,7 +475,7 @@ const DetailPage = () => {
 
 
     try {
-      const response = await fetch(`http://skywayapi.ntechagent.com/tget-images/${editData.id}`, {
+      const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${editData.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -790,7 +790,7 @@ const downloadCV = () => {
 
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://skywayapi.ntechagent.com/detail/tget-images?createdAt=${createdAt}`);
+        const response = await fetch(`https://skywayapi.ntechagent.com/detail/tget-images?createdAt=${createdAt}`);
         const result = await response.json();
         if (result.status === 'ok') {
           console.log('Fetched dataaaaaaa:', result.data); // Log the fetched data

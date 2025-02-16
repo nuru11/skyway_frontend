@@ -19,7 +19,7 @@ const DetailPage = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const API_URL = `http://skywayapi.ntechagent.com/api/agentsrequest/${id.id}?agentname=${agentName}`;
+  const API_URL = `https://skywayapi.ntechagent.com/api/agentsrequest/${id.id}?agentname=${agentName}`;
 
   useEffect(() => {
     const fetchData = async () => {

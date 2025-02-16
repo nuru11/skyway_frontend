@@ -49,7 +49,7 @@ const Signup = () => {
     setAgentName(selectedAgent); // Set agentName to the selected agent
 
     try {
-      const response = await fetch(`http://skywayapi.ntechagent.com/api/auth/register?agentname=${agentName2}`, {
+      const response = await fetch(`https://skywayapi.ntechagent.com/api/auth/register?agentname=${agentName2}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

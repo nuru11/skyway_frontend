@@ -104,7 +104,7 @@ const DetailPage = () => {
     const fetchData = async () => {
       console.log(agentName, " aaaaaaaaaaaa")
       try {
-        const response = await fetch(`http://skywayapi.ntechagent.com/detail/tget-images/${id}?agentname=${agentName}`);
+        const response = await fetch(`https://skywayapi.ntechagent.com/detail/tget-images/${id}?agentname=${agentName}`);
         const result = await response.json();
         if (result.status === 'ok') {
           setData(result.data); // Ensure this is an array
@@ -144,7 +144,7 @@ const DetailPage = () => {
 
 
     try {
-      const response = await fetch(`http://skywayapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
+      const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -514,7 +514,7 @@ const downloadCV = () => {
 
   const fetchData = async () => {
       try {
-        const response = await fetch(`http://skywayapi.ntechagent.com/detail/tget-images?createdAt=${createdAt}&agentname=${agentName}`);
+        const response = await fetch(`https://skywayapi.ntechagent.com/detail/tget-images?createdAt=${createdAt}&agentname=${agentName}`);
         const result = await response.json();
         if (result.status === 'ok') {
           console.log('Fetched dataaaaaaa:', result.data); // Log the fetched data
@@ -663,7 +663,7 @@ const downloadCV = () => {
     console.log("Updated acceptedBy data:", updatedAcceptedBy); // Debug log
 
     // Send the updated data back to the server
-    const updateResponse = await fetch(`http://skywayapi.ntechagent.com/tget-images/${data.id}?agentname=${agentName}`, {
+    const updateResponse = await fetch(`https://skywayapi.ntechagent.com/tget-images/${data.id}?agentname=${agentName}`, {
       method: 'PUT',
 
       headers: {
@@ -1410,7 +1410,7 @@ src={data.personalImageUrl || imagePlaceholder} // Get the last image
                                 <img src={data.fullBodyImageUrl || imagePlaceholder} alt="Full Body" className="full-body-image" />
                             </div>
                             <div>
-                                <img src={demoimage} alt="Agent Logo" className="agent-logo" />
+                                <img src={ouragentlogo} alt="Agent Logo" className="agent-logo" />
                             </div>
                         </div>
                     </div>
@@ -1649,7 +1649,7 @@ src={data.personalImageUrl || imagePlaceholder} // Get the last image
                                 <img src={data.fullBodyImageUrl || imagePlaceholder} alt="Full Body" className="full-body-image" />
                             </div>
                             <div>
-                                <img src={demoimage} alt="Agent Logo" className="agent-logo" />
+                                <img src={ouragentlogo} alt="Agent Logo" className="agent-logo" />
                             </div>
                         </div>
                     </div>
@@ -1810,7 +1810,7 @@ src={data.personalImageUrl || imagePlaceholder} // Get the last image
 </div>
 
                       <div className="wider-image-parent">
-                      <img src={demoimage} alt="Wider" className="wider-image" /></div>  
+                      <img src={ouragentlogo} alt="Wider" className="wider-image" /></div>  
                     </div>
                     <div className="title-parent">
                         <div style={{display: "flex", justifyContent: "space-around", border: "none"}}><div style={{ border: "none"}}>Personal Information</div>  <div style={{ border: "none"}}> ممعلومات شخصية </div></div>
@@ -2126,7 +2126,7 @@ src={data.personalImageUrl || imagePlaceholder} // Get the last image
                                 <img src={data.fullBodyImageUrl || imagePlaceholder} alt="Full Body" className="full-body-image" />
                             </div>
                             <div>
-                                <img src={demoimage} alt="Agent Logo" className="agent-logo" />
+                                <img src={ouragentlogo} alt="Agent Logo" className="agent-logo" />
                             </div>
                         </div>
                     </div>

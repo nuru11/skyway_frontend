@@ -1866,7 +1866,7 @@
 //     const dummyData = { newValue: 6 }; // Ensure this is an integer
 
 //     try {
-//       const response = await fetch('http://skywayapi.ntechagent.com/api/count', {
+//       const response = await fetch('https://skywayapi.ntechagent.com/api/count', {
 //         method: 'PUT', // Assuming you want to update the count
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -1910,7 +1910,7 @@
 
 //   const fetchCount = async () => {
 //     try {
-//       const response = await fetch('http://skywayapi.ntechagent.com/api/count');
+//       const response = await fetch('https://skywayapi.ntechagent.com/api/count');
 //       if (!response.ok) {
 //         throw new Error('Failed to fetch count');
 //       }
@@ -2202,7 +2202,7 @@
 //   React.useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const response = await fetch('http://skywayapi.ntechagent.com/tt');
+//         const response = await fetch('https://skywayapi.ntechagent.com/tt');
 //         const result = await response.json();
 //         if (result.status === 'ok') {
 //           setRows(result.data);
@@ -3800,7 +3800,7 @@
 	// 	React.useEffect(() => {
 	// 		const fetchData = async () => {
 	// 		try {
-	// 			const response = await fetch(`http://skywayapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`);
+	// 			const response = await fetch(`https://skywayapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`);
 	// 			const result = await response.json();
 	// 			if (result.status === 'ok') {
 	// 			console.log(result.data); // Log the fetched data for debugging
@@ -3855,7 +3855,7 @@
 	// 	<CardMedia
 	// 		component="img"
 	// 		height="440"
-	// 		image={video.personalimage ? `http://skywayapi.ntechagent.com/applicantimagetest/${video.personalimage}` : thumbnail}
+	// 		image={video.personalimage ? `https://skywayapi.ntechagent.com/applicantimagetest/${video.personalimage}` : thumbnail}
 	// 		alt={video.name}
 	// 		onClick={() => handleClickOpen(index)}
 	// 		style={{
@@ -3904,7 +3904,7 @@
 	// 			maxHeight: '80vh',     // Maximum height
 	// 			objectFit: 'cover',    // Maintain aspect ratio
 	// 		}}
-	// 		src={`http://skywayapi.ntechagent.com/applicantimagetest/${rows[selectedVideoIndex].video}`}
+	// 		src={`https://skywayapi.ntechagent.com/applicantimagetest/${rows[selectedVideoIndex].video}`}
 	// 		/>
 	// 		<div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '16px', marginBottom: "16px", background: "", width: "100%", padding: "10px" }}>
 	// 		<Button onClick={(event) => { 

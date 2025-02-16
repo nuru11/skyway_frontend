@@ -446,7 +446,7 @@ useEffect(() => {
 
   const fetchCount = async () => {
     try {
-      const response = await fetch('http://skywayapi.ntechagent.com/api/count');
+      const response = await fetch('https://skywayapi.ntechagent.com/api/count');
       if (!response.ok) {
         throw new Error('Failed to fetch count');
       }
@@ -940,7 +940,7 @@ useEffect(() => {
       const [dataa, setDataa] = useState();
       const fetchDataa = async () => {
         try {
-          const response = await fetch(`http://skywayapi.ntechagent.com/tt?agentname=${agentName}`);
+          const response = await fetch(`https://skywayapi.ntechagent.com/tt?agentname=${agentName}`);
           const result = await response.json();
           if (result.status === 'ok') {
             console.log(result.data); // Log the fetched data for debugging
@@ -1008,7 +1008,7 @@ useEffect(() => {
               const dummyData = { newValue: count + 1 }; // Ensure this is an integer
           
               try {
-                const response = await fetch('http://skywayapi.ntechagent.com/api/count', {
+                const response = await fetch('https://skywayapi.ntechagent.com/api/count', {
                   method: 'PUT', // Assuming you want to update the count
                   headers: {
                     'Content-Type': 'application/json',
@@ -1123,7 +1123,7 @@ formData.append("status", "Interview Scheduled");
 
 try {
     const response = await axios.post(
-      `http://skywayapi.ntechagent.com/tupload-image?agentname=${agentName}`,
+      `https://skywayapi.ntechagent.com/tupload-image?agentname=${agentName}`,
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
@@ -1196,7 +1196,7 @@ try {
       const dummyData = { newValue: count + 1 }; // Ensure this is an integer
           
       try {
-        const response = await fetch('http://skywayapi.ntechagent.com/api/count', {
+        const response = await fetch('https://skywayapi.ntechagent.com/api/count', {
           method: 'PUT', // Assuming you want to update the count
           headers: {
             'Content-Type': 'application/json',
@@ -1324,7 +1324,7 @@ formData.append("status", "Interview Scheduled");
 
 try {
     const response = await axios.post(
-      `http://skywayapi.ntechagent.com/tupload-image?agentname=${agentName}`,
+      `https://skywayapi.ntechagent.com/tupload-image?agentname=${agentName}`,
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
@@ -1656,7 +1656,7 @@ personalInfo.dateOfBirth = !personalInfo.dateOfBirth ? formattedDate : personalI
       const dummyData = { newValue: count + 1 }; // Ensure this is an integer
           
       try {
-        const response = await fetch('http://skywayapi.ntechagent.com/api/count', {
+        const response = await fetch('https://skywayapi.ntechagent.com/api/count', {
           method: 'PUT', // Assuming you want to update the count
           headers: {
             'Content-Type': 'application/json',
@@ -1800,7 +1800,7 @@ personalInfo.dateOfBirth = !personalInfo.dateOfBirth ? formattedDate : personalI
        const dummyData = { newValue: count + 1 }; // Ensure this is an integer
           
        try {
-         const response = await fetch('http://skywayapi.ntechagent.com/api/count', {
+         const response = await fetch('https://skywayapi.ntechagent.com/api/count', {
            method: 'PUT', // Assuming you want to update the count
            headers: {
              'Content-Type': 'application/json',
@@ -2799,7 +2799,7 @@ src={applicantpersonalimagePreview !== null
     : imagePlaceholder} alt="Full Body" className="full-body-image" />
                             </div>
                             <div>
-                                <img src={demoimage} alt="Agent Logo" className="agent-logo" />
+                                <img src={ouragentlogo} alt="Agent Logo" className="agent-logo" />
                             </div>
                         </div>
                     </div>
@@ -3036,7 +3036,7 @@ src={applicantpersonalimagePreview !== null
     : imagePlaceholder} alt="Full Body" className="full-body-image" />
                             </div>
                             <div>
-                                <img src={demoimage} alt="Agent Logo" className="agent-logo" />
+                                <img src={ouragentlogo} alt="Agent Logo" className="agent-logo" />
                             </div>
                         </div>
                     </div>
@@ -3194,7 +3194,7 @@ src={applicantpersonalimagePreview !== null
 </div>
 
                       <div className="wider-image-parent">
-                      <img src={demoimage} alt="Wider" className="wider-image" /></div>  
+                      <img src={ouragentlogo} alt="Wider" className="wider-image" /></div>  
                     </div>
                     <div className="title-parent">
                         <div style={{display: "flex", justifyContent: "space-around", border: "none"}}><div style={{ border: "none"}}>Personal Information</div>  <div style={{ border: "none"}}> ممعلومات شخصية </div></div>
@@ -3511,7 +3511,7 @@ src={applicantpersonalimagePreview !== null
     : imagePlaceholder} alt="Full Body" className="full-body-image" />
                             </div>
                             <div>
-                                <img src={demoimage} alt="Agent Logo" className="agent-logo" />
+                                <img src={ouragentlogo} alt="Agent Logo" className="agent-logo" />
                             </div>
                         </div>
                     </div>

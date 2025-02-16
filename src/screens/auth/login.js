@@ -8,23 +8,22 @@ import {
   Alert,
   Box,
 } from '@mui/material';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [verificationCode, setVerificationCode] = useState('');
-  const [generatedCode, setGeneratedCode] = useState('');
+  const [expectedVerificationCode, setExpectedVerificationCode] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [openSnackbar, setOpenSnackbar] = useState(false);
   
-  const navigate = useNavigate(); // Initialize useNavigate
-  const location = useLocation(); // Get the current location
+  const navigate = useNavigate();
 
   useEffect(() => {
     const code = Math.floor(100000 + Math.random() * 900000).toString();
-    setGeneratedCode(code);
+    setExpectedVerificationCode(code);
     console.log(`Generated code for testing: ${code}`);
   }, []);
 
@@ -33,15 +32,14 @@ const Login = () => {
     setError('');
     setSuccess('');
 
-    // Check if the verification code matches
-    if (verificationCode !== generatedCode) {
+    if (verificationCode !== expectedVerificationCode) {
       setError('Verification code is incorrect.');
       setOpenSnackbar(true);
       return;
     }
 
     try {
-      const response = await fetch('http://skywayapi.ntechagent.com/api/auth/login', {
+      const response = await fetch('https://skywayapi.ntechagent.com/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
@@ -51,31 +49,20 @@ const Login = () => {
         const data = await response.json();
         const token = data.token;
         localStorage.setItem('token', token);
-        console.log("Token:", token);
-        localStorage.setItem("userdata", data.agentName);
-        console.log(data.agentName, " kkkkkkkkkkkkkkk");
+        localStorage.setItem('userdata', data.agentName);
 
         // Set expiration time for 20 minutes
         const expirationTime = new Date().getTime() + 20 * 60 * 1000;
         localStorage.setItem('tokenExpiration', expirationTime);
 
-        // Decode the token to check user role
-        if (token) {
-          try {
-            const payload = JSON.parse(atob(token.split('.')[1]));
-            const isAdmin = payload.isAdmin || false;
-            console.log("Payload:", payload.isAdmin);
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        const isAdmin = payload.isAdmin || false;
 
-            // Redirect based on admin status
-
-           if (isAdmin) {
-              navigate('/'); // Redirect to admin dashboard
-            } else {
-              navigate('/listforagent'); // Redirect non-admins to /listforagent
-            }
-          } catch (error) {
-            console.error("Token decoding failed:", error);
-          }
+        // Redirect based on admin status
+        if (isAdmin) {
+          navigate('/'); // Redirect to admin dashboard
+        } else {
+          navigate('/listforagent'); // Redirect non-admins to /listforagent
         }
 
         setSuccess('Login successful!');
@@ -122,7 +109,7 @@ const Login = () => {
             required
           />
           <TextField
-            label={`Enter this code: ${generatedCode}`}
+            label={`Enter this code: ${expectedVerificationCode}`}
             variant="outlined"
             fullWidth
             margin="normal"
@@ -199,7 +186,7 @@ export default Login;
 //     }
 
 //     try {
-//       const response = await fetch('http://skywayapi.ntechagent.com/api/auth/login', {
+//       const response = await fetch('https://skywayapi.ntechagent.com/api/auth/login', {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         body: JSON.stringify({ username, password }),

@@ -85,7 +85,7 @@ const [data, setData] = React.useState('');
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://skywayapi.ntechagent.com/api/agentsrequestget?agentname=${agentName}`, {
+        const response = await fetch(`https://testcvapi.ntechagent.com/api/agentsrequestget?agentname=${agentName}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -125,7 +125,7 @@ const [data, setData] = React.useState('');
     const confirmDelete = window.confirm(`Are you sure you want to delete this item?`);
     if (confirmDelete) {
       try {
-        const response = await fetch(`https://skywayapi.ntechagent.com/api/agentsrequest/${id}?agentname=${agentName}`, {
+        const response = await fetch(`https://testcvapi.ntechagent.com/api/agentsrequest/${id}?agentname=${agentName}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`, // Include the token in the headers

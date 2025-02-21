@@ -23,7 +23,7 @@
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${id.listid}`);
+//         const response = await fetch(`https://testcvapi.ntechagent.com/tget-images/${id.listid}`);
 //         const result = await response.json();
 //         if (result.status === 'ok') {
 //           setData(result.data);
@@ -134,7 +134,7 @@
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${id.listid}`);
+//         const response = await fetch(`https://testcvapi.ntechagent.com/tget-images/${id.listid}`);
 //         const result = await response.json();
 //         if (result.status === 'ok') {
 //           setData(result.data);
@@ -437,7 +437,7 @@ const DetailPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://skywayapi.ntechagent.com/detail/tget-images/${id}`, {
+        const response = await fetch(`https://testcvapi.ntechagent.com/detail/tget-images/${id}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -483,7 +483,7 @@ const DetailPage = () => {
 
 
     try {
-      const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${editData.id}`, {
+      const response = await fetch(`https://testcvapi.ntechagent.com/tget-images/${editData.id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -799,7 +799,7 @@ const downloadCV = () => {
 
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://skywayapi.ntechagent.com/detail/tget-images?createdAt=${createdAt}`, {
+        const response = await fetch(`https://testcvapi.ntechagent.com/detail/tget-images?createdAt=${createdAt}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -859,7 +859,7 @@ const downloadCV = () => {
 
   //   const fetchData = async () => {
   //     try {
-  //       const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${id.listid}`);
+  //       const response = await fetch(`https://testcvapi.ntechagent.com/tget-images/${id.listid}`);
   //       const result = await response.json();
   //       if (result.status === 'ok') {
   //         setData(result.data);

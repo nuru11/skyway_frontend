@@ -9,7 +9,7 @@ const DataDisplay = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://skywayapi.ntechagent.com/tt'); // Adjust the URL to your API endpoint
+        const response = await fetch('https://testcvapi.ntechagent.com/tt'); // Adjust the URL to your API endpoint
         console.log('Responsessssssssss:', response); // Add this line to log the response object
         const result = await response.json();
         console.log('Responsessssssssss:', result);

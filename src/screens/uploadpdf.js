@@ -22,7 +22,7 @@ const UploadPdf = () => {
 
         // Upload the PDF blob using fetch
         try {
-            const response = await fetch('https://skywayapi.ntechagent.com/uploadpdf', {
+            const response = await fetch('https://testcvapi.ntechagent.com/uploadpdf', {
                 method: 'POST',
                 body: formData,
             });

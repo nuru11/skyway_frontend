@@ -17,7 +17,7 @@
 //         const fetchApplicants = async () => {
 //             try {
 //                 // Uncomment the following lines to fetch real data.
-//                 const response = await fetch(`https://skywayapi.ntechagent.com/applicantshistory?agentname=${agentName}`);
+//                 const response = await fetch(`https://testcvapi.ntechagent.com/applicantshistory?agentname=${agentName}`);
 //                 if (!response.ok) {
 //                     throw new Error('Network response was not ok');
 //                 }
@@ -304,7 +304,7 @@ const ApplicantsList = () => {
     // useEffect(() => {
     //     const fetchApplicants = async () => {
     //         try {
-    //             const response = await fetch('https://skywayapi.ntechagent.com/applicantshistory', {
+    //             const response = await fetch('https://testcvapi.ntechagent.com/applicantshistory', {
     //                 method: 'GET',
     //                 headers: {
     //                     'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -338,7 +338,7 @@ const ApplicantsList = () => {
     useEffect(() => {
         const fetchApplicants = async () => {
             try {
-                const response = await fetch(`https://skywayapi.ntechagent.com/applicantshistory?agentname=${agentName}`, {
+                const response = await fetch(`https://testcvapi.ntechagent.com/applicantshistory?agentname=${agentName}`, {
                     method: 'GET',
                     headers: {
                       'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -434,7 +434,7 @@ const ApplicantsList = () => {
         if (confirmDelete) {
           try {
             // Send DELETE request to the server with JSON payload
-            const response = await fetch(`https://skywayapi.ntechagent.com/deleteapplicanthistory/${id}?agentname=${agentName}`, {
+            const response = await fetch(`https://testcvapi.ntechagent.com/deleteapplicanthistory/${id}?agentname=${agentName}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`, // Include the token in the headers

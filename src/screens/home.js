@@ -448,7 +448,7 @@ useEffect(() => {
 
   const fetchCount = async () => {
     try {
-      const response = await fetch('https://skywayapi.ntechagent.com/api/count', {
+      const response = await fetch('https://testcvapi.ntechagent.com/api/count', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -564,7 +564,7 @@ useEffect(() => {
      
      
       const getImage = async () => {
-        const result = await axios.get("https://skywayapi.ntechagent.com/get-image", {
+        const result = await axios.get("https://testcvapi.ntechagent.com/get-image", {
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -580,7 +580,7 @@ useEffect(() => {
     
     
       const passgetImage = async () => {
-        const result = await axios.get("https://skywayapi.ntechagent.com/passget-image", {
+        const result = await axios.get("https://testcvapi.ntechagent.com/passget-image", {
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -904,7 +904,7 @@ useEffect(() => {
     
     
       const applicantgetImage = async () => {
-        const result = await axios.get("https://skywayapi.ntechagent.com/applicantget-image", {
+        const result = await axios.get("https://testcvapi.ntechagent.com/applicantget-image", {
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -966,7 +966,7 @@ useEffect(() => {
       const [dataa, setDataa] = useState();
       const fetchDataa = async () => {
         try {
-          const response = await fetch(`https://skywayapi.ntechagent.com/tt?agentname=${agentName}`, {
+          const response = await fetch(`https://testcvapi.ntechagent.com/tt?agentname=${agentName}`, {
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -1040,7 +1040,7 @@ useEffect(() => {
               const dummyData = { newValue: count + 1 }; // Ensure this is an integer
           
               try {
-                const response = await fetch('https://skywayapi.ntechagent.com/api/count', {
+                const response = await fetch('https://testcvapi.ntechagent.com/api/count', {
                   method: 'PUT', // Assuming you want to update the count
                   headers: {
                     'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -1156,7 +1156,7 @@ formData.append("status", "Interview Scheduled");
 
 try {
     const response = await axios.post(
-      `https://skywayapi.ntechagent.com/tupload-image?agentname=${agentName}`,
+      `https://testcvapi.ntechagent.com/tupload-image?agentname=${agentName}`,
       formData,
       {
         
@@ -1234,7 +1234,7 @@ try {
       const dummyData = { newValue: count + 1 }; // Ensure this is an integer
           
       try {
-        const response = await fetch('https://skywayapi.ntechagent.com/api/count', {
+        const response = await fetch('https://testcvapi.ntechagent.com/api/count', {
           method: 'PUT', // Assuming you want to update the count
           headers: {
             'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -1363,7 +1363,7 @@ formData.append("status", "Interview Scheduled");
 
 try {
     const response = await axios.post(
-      `https://skywayapi.ntechagent.com/tupload-image?agentname=${agentName}`,
+      `https://testcvapi.ntechagent.com/tupload-image?agentname=${agentName}`,
       formData,
       {
         headers: {
@@ -1643,7 +1643,7 @@ personalInfo.dateOfBirth = !personalInfo.dateOfBirth ? formattedDate : personalI
   
     const fetchData = async () => {
         try {
-            const response = await fetch('https://skywayapi.ntechagent.com/cv-builder-1', {
+            const response = await fetch('https://testcvapi.ntechagent.com/cv-builder-1', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -1662,7 +1662,7 @@ personalInfo.dateOfBirth = !personalInfo.dateOfBirth ? formattedDate : personalI
 
     const deleteItemsByName = async () => {
         try {
-            const response = await fetch(`https://skywayapi.ntechagent.com/cv-builder-1?name=${encodeURIComponent(personalInfo.email)}`, {
+            const response = await fetch(`https://testcvapi.ntechagent.com/cv-builder-1?name=${encodeURIComponent(personalInfo.email)}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -1706,7 +1706,7 @@ personalInfo.dateOfBirth = !personalInfo.dateOfBirth ? formattedDate : personalI
       const dummyData = { newValue: count + 1 }; // Ensure this is an integer
           
       try {
-        const response = await fetch('https://skywayapi.ntechagent.com/api/count', {
+        const response = await fetch('https://testcvapi.ntechagent.com/api/count', {
           method: 'PUT', // Assuming you want to update the count
            headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -1851,7 +1851,7 @@ personalInfo.dateOfBirth = !personalInfo.dateOfBirth ? formattedDate : personalI
        const dummyData = { newValue: count + 1 }; // Ensure this is an integer
           
        try {
-         const response = await fetch('https://skywayapi.ntechagent.com/api/count', {
+         const response = await fetch('https://testcvapi.ntechagent.com/api/count', {
            method: 'PUT', // Assuming you want to update the count
             headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the headers

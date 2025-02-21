@@ -372,7 +372,7 @@
 //         formData.append("image", image);
     
 //         const result = await axios.post(
-//           "https://skywayapi.ntechagent.com/upload-image",
+//           "https://testcvapi.ntechagent.com/upload-image",
 //           formData,
 //           {
 //             headers: { "Content-Type": "multipart/form-data" },
@@ -392,7 +392,7 @@
 //       };
     
 //       const getImage = async () => {
-//         const result = await axios.get("https://skywayapi.ntechagent.com/get-image");
+//         const result = await axios.get("https://testcvapi.ntechagent.com/get-image");
 //         console.log(result);
 //         setAllImage(result.data.data);
 //       };
@@ -406,7 +406,7 @@
 //         formData.append("pimage", passportimage);
     
 //         const result = await axios.post(
-//           "https://skywayapi.ntechagent.com/passupload-image",
+//           "https://testcvapi.ntechagent.com/passupload-image",
 //           formData,
 //           {
 //             headers: { "Content-Type": "multipart/form-data" },
@@ -425,7 +425,7 @@
 //       };
     
 //       const passgetImage = async () => {
-//         const result = await axios.get("https://skywayapi.ntechagent.com/passget-image");
+//         const result = await axios.get("https://testcvapi.ntechagent.com/passget-image");
 //         console.log(result);
 //         setPassportallimage(result.data.data);
 //       };
@@ -434,7 +434,7 @@
 
 //      const passdeleteImages = async () => {
 //         try {
-//           const response = await axios.delete("https://skywayapi.ntechagent.com/passdelete-images");
+//           const response = await axios.delete("https://testcvapi.ntechagent.com/passdelete-images");
 //           if (response.data.status === "ok") {
           
 //             setPassportallimage(null);
@@ -611,7 +611,7 @@
 // formData.append("monthlysalaryJordan", personalInfo.monthlysalaryJordan + " JOD");
 // formData.append("experience", JSON.stringify(projectInfo.project))
 //         const result = await axios.post(
-//             "https://skywayapi.ntechagent.com/applicantupload-image",
+//             "https://testcvapi.ntechagent.com/applicantupload-image",
 //             formData,
 //             {
 //                 headers: { "Content-Type": "multipart/form-data" },
@@ -632,7 +632,7 @@
 //       };
     
 //       const applicantgetImage = async () => {
-//         const result = await axios.get("https://skywayapi.ntechagent.com/applicantget-image");
+//         const result = await axios.get("https://testcvapi.ntechagent.com/applicantget-image");
 //         console.log(result);
 //         setApplicantPassportallimage(result.data.data);
 //       };
@@ -748,7 +748,7 @@
 // formData.append("monthlysalaryJordan", salaries.jordan);
 // formData.append("experience", JSON.stringify(projectInfo.project))
 //         const result = await axios.post(
-//             "https://skywayapi.ntechagent.com/tupload-image",
+//             "https://testcvapi.ntechagent.com/tupload-image",
 //             formData,
 //             {
 //                 headers: { "Content-Type": "multipart/form-data" },
@@ -817,7 +817,7 @@
 // formData.append("monthlysalaryJordan", salaries.jordan );
 // formData.append("experience", JSON.stringify(projectInfo.project))
 //         const result = await axios.post(
-//             "https://skywayapi.ntechagent.com/tupload-image",
+//             "https://testcvapi.ntechagent.com/tupload-image",
 //             formData,
 //             {
 //                 headers: { "Content-Type": "multipart/form-data" },
@@ -1038,7 +1038,7 @@
   
 //     const fetchData = async () => {
 //         try {
-//             const response = await fetch('https://skywayapi.ntechagent.com/cv-builder-1'); // Your API endpoint
+//             const response = await fetch('https://testcvapi.ntechagent.com/cv-builder-1'); // Your API endpoint
 //             const data = await response.json();
 //             console.log(data);
 //             setCvitem(data.itemtests); // Update state with fetched data
@@ -1055,7 +1055,7 @@
 //         };
 
 //         try {
-//             const response = await fetch('https://skywayapi.ntechagent.com/cv-builder-1', {
+//             const response = await fetch('https://testcvapi.ntechagent.com/cv-builder-1', {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json',
@@ -1077,7 +1077,7 @@
 
 //     const deleteItemsByName = async () => {
 //         try {
-//             const response = await fetch(`https://skywayapi.ntechagent.com/cv-builder-1?name=${encodeURIComponent(personalInfo.email)}`, {
+//             const response = await fetch(`https://testcvapi.ntechagent.com/cv-builder-1?name=${encodeURIComponent(personalInfo.email)}`, {
 //                 method: 'DELETE',
 //                 headers: {
 //                     'Content-Type': 'application/json',

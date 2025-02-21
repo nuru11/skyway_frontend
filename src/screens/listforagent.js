@@ -82,7 +82,7 @@
 // //   React.useEffect(() => {
 // //     const fetchData = async () => {
 // //       try {
-// //         const response = await fetch('https://skywayapi.ntechagent.com/tt');
+// //         const response = await fetch('https://testcvapi.ntechagent.com/tt');
 // //         const result = await response.json();
 // //         if (result.status === 'ok') {
 // //           console.log(result.data); // Log the fetched data for debugging
@@ -108,7 +108,7 @@
 
 //     const fetchData = async () => {
 //       try {
-//         const response = await fetch(`https://skywayapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`);
+//         const response = await fetch(`https://testcvapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`);
 //         const result = await response.json();
 //         if (result.status === 'ok') {
 //           console.log('Fetched dataaaaaaa:', result.data); // Log the fetched data
@@ -366,7 +366,7 @@ export default function StickyHeadTable() {
 
   // const fetchData = async () => {
   //   try {
-  //     const response = await fetch(`https://skywayapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`);
+  //     const response = await fetch(`https://testcvapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`);
   //     const result = await response.json();
   //     if (result.status === 'ok') {
   //       // setData(result.data);
@@ -393,7 +393,7 @@ export default function StickyHeadTable() {
   const fetchData = async () => {
     const token = localStorage.getItem('token'); // Get token from local storage
     try {
-        const response = await fetch(`https://skywayapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`, {
+        const response = await fetch(`https://testcvapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}` // Include the token in the request headers
@@ -452,7 +452,7 @@ export default function StickyHeadTable() {
         return entry;
       });
   
-      const updateResponse = await fetch(`https://skywayapi.ntechagent.com/edit_for_agent/${applicantId}?agentname=${agentName}`, {
+      const updateResponse = await fetch(`https://testcvapi.ntechagent.com/edit_for_agent/${applicantId}?agentname=${agentName}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the headers

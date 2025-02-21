@@ -88,7 +88,7 @@ const MyForm = () => {
     };
 
     try {
-      const response = await fetch(`https://skywayapi.ntechagent.com/api/agentsrequestpost?agentname=${agentName}`, {
+      const response = await fetch(`https://testcvapi.ntechagent.com/api/agentsrequestpost?agentname=${agentName}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

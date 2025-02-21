@@ -564,6 +564,32 @@ const downloadCV = () => {
       reader.readAsDataURL(blob);
     });
   };
+
+
+  const handleDelete = async (id) => {
+    const token = localStorage.getItem('token');
+    const confirmDelete = window.confirm('Are you sure you want to delete this item?');
+    if (confirmDelete) {
+      try {
+        const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${id}?agentname=${agentName}`, {
+          method: 'DELETE',
+          headers: {
+            'Authorization': `Bearer ${token}`, // Include the token in the headers
+            'Content-Type': 'application/json' // Optional: specify the content type
+          }
+        });
+        const result = await response.json();
+        if (result.status === 'ok') {
+          console.log("aaaaaaaaaaaa ", result)
+          window.location.href = '/list';
+        } else {
+          console.error('Error deleting data:', result.message);
+        }
+      } catch (error) {
+        console.error('Delete error:', error);
+      }
+    }
+  };
   
 
 
@@ -1231,6 +1257,18 @@ const handleCloseSnackbar = () => {
             >
               Share on Telegram
             </Button>
+          </Grid>
+
+          <Grid item>
+            <Button
+              variant="contained"
+              color="error"
+              startIcon={<DeleteIcon />}
+              onClick={(event) => { event.stopPropagation(); handleDelete(data.id) /* Delete functionality */ }}
+            >
+              Delete
+            </Button>
+            
           </Grid>
         </Grid>}
 

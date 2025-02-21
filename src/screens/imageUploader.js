@@ -16,7 +16,7 @@
 //     formData.append("image", image);
 
 //     const result = await axios.post(
-//       "https://skywayapi.ntechagent.com/upload-image",
+//       "https://testcvapi.ntechagent.com/upload-image",
 //       formData,
 //       {
 //         headers: { "Content-Type": "multipart/form-data" },
@@ -30,7 +30,7 @@
 //   };
 
 //   const getImage = async () => {
-//     const result = await axios.get("https://skywayapi.ntechagent.com/get-image");
+//     const result = await axios.get("https://testcvapi.ntechagent.com/get-image");
 //     console.log(result);
 //     setAllImage(result.data.data);
 //   };
@@ -90,7 +90,7 @@
 //     const formData = new FormData();
 //     formData.append("image", this.state.image);
 
-//     await axios.post("https://skywayapi.ntechagent.com/upload-image", formData, {
+//     await axios.post("https://testcvapi.ntechagent.com/upload-image", formData, {
 //       headers: { "Content-Type": "multipart/form-data" },
 //     });
 //     await this.getImage(); // Refresh the images after upload
@@ -103,7 +103,7 @@
 
 //   getImage = async () => {
 //     try {
-//       const result = await axios.get("https://skywayapi.ntechagent.com/get-image");
+//       const result = await axios.get("https://testcvapi.ntechagent.com/get-image");
 //       console.log(result);
 //     await  this.setState({ allImage: result.data.data });
 //     } catch (error) {
@@ -186,7 +186,7 @@ function App() {
     formData.append("image", image);
 
     const result = await axios.post(
-      "https://skywayapi.ntechagent.com/upload-image",
+      "https://testcvapi.ntechagent.com/upload-image",
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
@@ -205,7 +205,7 @@ function App() {
   };
 
   const getImage = async () => {
-    const result = await axios.get("https://skywayapi.ntechagent.com/get-image");
+    const result = await axios.get("https://testcvapi.ntechagent.com/get-image");
     console.log(result);
     setAllImage(result.data.data);
   };
@@ -348,7 +348,7 @@ export default App;
 //   }
 
 //   getImage = async () => {
-//     const result = await axios.get("https://skywayapi.ntechagent.com/get-image");
+//     const result = await axios.get("https://testcvapi.ntechagent.com/get-image");
 //     console.log(result);
 //     this.setState({ allImage: result.data.data });
 //   };
@@ -359,7 +359,7 @@ export default App;
 //     const formData = new FormData();
 //     formData.append("image", this.state.image);
 
-//     await axios.post("https://skywayapi.ntechagent.com/upload-image", formData, {
+//     await axios.post("https://testcvapi.ntechagent.com/upload-image", formData, {
 //       headers: { "Content-Type": "multipart/form-data" },
 //     });
 

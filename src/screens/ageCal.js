@@ -307,7 +307,7 @@
 //         formData.append("age", 22);
         
 //         const result = await axios.post(
-//             "https://skywayapi.ntechagent.com/applicantupload-image",
+//             "https://testcvapi.ntechagent.com/applicantupload-image",
 //             formData,
 //             {
 //                 headers: { "Content-Type": "multipart/form-data" },
@@ -327,7 +327,7 @@
 //     };
 
 //     const applicantgetImage = async () => {
-//         const result = await axios.get("https://skywayapi.ntechagent.com/applicantget-image");
+//         const result = await axios.get("https://testcvapi.ntechagent.com/applicantget-image");
 //         setApplicantallImage(result.data.data);
 //     };
 
@@ -438,7 +438,7 @@
 
 //   const getImages = async () => {
 //     try {
-//       const result = await axios.get("https://skywayapi.ntechagent.com/tget-images");
+//       const result = await axios.get("https://testcvapi.ntechagent.com/tget-images");
 //       setAllImage(result.data.data); // Assuming your API returns an array of images
 //     } catch (error) {
 //       console.error(error);
@@ -452,7 +452,7 @@
 // //     // formData.append("image2", image2);
 
 // //     const result = await axios.post(
-// //       "https://skywayapi.ntechagent.com/tupload-image",
+// //       "https://testcvapi.ntechagent.com/tupload-image",
 // //       formData,
 // //       {
 // //         headers: { "Content-Type": "multipart/form-data" },
@@ -468,7 +468,7 @@
 // //     formData.append("imaget", image2);
 
 // //     const result = await axios.post(
-// //       "https://skywayapi.ntechagent.com/tupload-image",
+// //       "https://testcvapi.ntechagent.com/tupload-image",
 // //       formData,
 // //       {
 // //         headers: { "Content-Type": "multipart/form-data" },
@@ -487,7 +487,7 @@
 //   };
 
 // //   const getImage = async () => {
-// //     const result = await axios.get("https://skywayapi.ntechagent.com/tget-image");
+// //     const result = await axios.get("https://testcvapi.ntechagent.com/tget-image");
 // //     console.log(result);
 // //     setAllImage(result.data.data);
 // //   };
@@ -535,7 +535,7 @@
 //     if (image2) formData.append("imaget", image2);
   
 //     try {
-//       const result = await axios.post("https://skywayapi.ntechagent.com/tupload-image", formData, {
+//       const result = await axios.post("https://testcvapi.ntechagent.com/tupload-image", formData, {
 //         headers: { "Content-Type": "multipart/form-data" },
 //       });
 //       console.log(result.data);
@@ -553,7 +553,7 @@
 //         <button type="submit">Submit</button>
 //       </form>
 //       {/* {allImage && allImage.map((data) => (
-//         <img key={data.image} src={`https://skywayapi.ntechagent.com/images/${data.image}`} height={100} width={100} alt="uploaded" />
+//         <img key={data.image} src={`https://testcvapi.ntechagent.com/images/${data.image}`} height={100} width={100} alt="uploaded" />
 //       ))} */}
 
 // {/* {allImage == null
@@ -624,7 +624,7 @@
 
 //   const getImages = async () => {
 //     try {
-//       const result = await axios.get("https://skywayapi.ntechagent.com/get-images");
+//       const result = await axios.get("https://testcvapi.ntechagent.com/get-images");
 //       setImages(result.data.data);
 //     } catch (error) {
 //       console.error(error);
@@ -655,7 +655,7 @@
 //     });
 
 //     try {
-//       const result = await axios.post("https://skywayapi.ntechagent.com/tupload-image", data, {
+//       const result = await axios.post("https://testcvapi.ntechagent.com/tupload-image", data, {
 //         headers: { "Content-Type": "multipart/form-data" },
 //       });
 //       console.log(result.data);
@@ -730,9 +730,9 @@
 //       ) : (
 //         images.map((data) => (
 //           <div key={data._id}>
-//             <img src={`https://skywayapi.ntechagent.com/applicantimagetest/${data.image}`} height={100} width={100} alt="Uploaded" />
+//             <img src={`https://testcvapi.ntechagent.com/applicantimagetest/${data.image}`} height={100} width={100} alt="Uploaded" />
 //             {data.image2 && (
-//               <img src={`https://skywayapi.ntechagent.com/applicantimgtwo/${data.image2}`} height={100} width={100} alt="Uploaded" />
+//               <img src={`https://testcvapi.ntechagent.com/applicantimgtwo/${data.image2}`} height={100} width={100} alt="Uploaded" />
 //             )}
 //             {/* Display additional fields */}
 //             <p>Name: {data.name} {data.surname}</p>
@@ -778,7 +778,7 @@
 
 //   const getImages = async () => {
 //     try {
-//       const result = await axios.get("https://skywayapi.ntechagent.com/get-images");
+//       const result = await axios.get("https://testcvapi.ntechagent.com/get-images");
 //       setImages(result.data.data);
 //     } catch (error) {
 //       console.error(error);
@@ -812,7 +812,7 @@
 //     if (image2) formData.append("imaget", image2);
 
 //     try {
-//       const result = await axios.post("https://skywayapi.ntechagent.com/tupload-image", formData, {
+//       const result = await axios.post("https://testcvapi.ntechagent.com/tupload-image", formData, {
 //         headers: { "Content-Type": "multipart/form-data" },
 //       });
 //       console.log(result.data);
@@ -1866,7 +1866,7 @@
 //     const dummyData = { newValue: 6 }; // Ensure this is an integer
 
 //     try {
-//       const response = await fetch('https://skywayapi.ntechagent.com/api/count', {
+//       const response = await fetch('https://testcvapi.ntechagent.com/api/count', {
 //         method: 'PUT', // Assuming you want to update the count
 //         headers: {
 //           'Content-Type': 'application/json',
@@ -1910,7 +1910,7 @@
 
 //   const fetchCount = async () => {
 //     try {
-//       const response = await fetch('https://skywayapi.ntechagent.com/api/count');
+//       const response = await fetch('https://testcvapi.ntechagent.com/api/count');
 //       if (!response.ok) {
 //         throw new Error('Failed to fetch count');
 //       }
@@ -2202,7 +2202,7 @@
 //   React.useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const response = await fetch('https://skywayapi.ntechagent.com/tt');
+//         const response = await fetch('https://testcvapi.ntechagent.com/tt');
 //         const result = await response.json();
 //         if (result.status === 'ok') {
 //           setRows(result.data);
@@ -3800,7 +3800,7 @@
 	// 	React.useEffect(() => {
 	// 		const fetchData = async () => {
 	// 		try {
-	// 			const response = await fetch(`https://skywayapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`);
+	// 			const response = await fetch(`https://testcvapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`);
 	// 			const result = await response.json();
 	// 			if (result.status === 'ok') {
 	// 			console.log(result.data); // Log the fetched data for debugging
@@ -3855,7 +3855,7 @@
 	// 	<CardMedia
 	// 		component="img"
 	// 		height="440"
-	// 		image={video.personalimage ? `https://skywayapi.ntechagent.com/applicantimagetest/${video.personalimage}` : thumbnail}
+	// 		image={video.personalimage ? `https://testcvapi.ntechagent.com/applicantimagetest/${video.personalimage}` : thumbnail}
 	// 		alt={video.name}
 	// 		onClick={() => handleClickOpen(index)}
 	// 		style={{
@@ -3904,7 +3904,7 @@
 	// 			maxHeight: '80vh',     // Maximum height
 	// 			objectFit: 'cover',    // Maintain aspect ratio
 	// 		}}
-	// 		src={`https://skywayapi.ntechagent.com/applicantimagetest/${rows[selectedVideoIndex].video}`}
+	// 		src={`https://testcvapi.ntechagent.com/applicantimagetest/${rows[selectedVideoIndex].video}`}
 	// 		/>
 	// 		<div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '16px', marginBottom: "16px", background: "", width: "100%", padding: "10px" }}>
 	// 		<Button onClick={(event) => { 

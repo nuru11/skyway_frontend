@@ -38,7 +38,7 @@
 // 	  React.useEffect(() => {
 // 		const fetchData = async () => {
 // 		  try {
-// 			const response = await fetch(`https://skywayapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`);
+// 			const response = await fetch(`https://testcvapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`);
 // 			const result = await response.json();
 // 			if (result.status === 'ok') {
 // 			  console.log(result.data); // Log the fetched data for debugging
@@ -93,7 +93,7 @@
 //       <CardMedia
 //         component="img"
 //         height="440"
-//         image={video.personalimage ? `https://skywayapi.ntechagent.com/applicantimagetest/${video.personalimage}` : thumbnail}
+//         image={video.personalimage ? `https://testcvapi.ntechagent.com/applicantimagetest/${video.personalimage}` : thumbnail}
 //         alt={video.name}
 //         onClick={() => handleClickOpen(index)}
 //         style={{
@@ -142,7 +142,7 @@
 //             maxHeight: '80vh',     // Maximum height
 //             objectFit: 'cover',    // Maintain aspect ratio
 //           }}
-//           src={`https://skywayapi.ntechagent.com/applicantimagetest/${rows[selectedVideoIndex].video}`}
+//           src={`https://testcvapi.ntechagent.com/applicantimagetest/${rows[selectedVideoIndex].video}`}
 //         />
 //         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '16px', marginBottom: "16px", background: "", width: "100%", padding: "10px" }}>
 //           <Button onClick={(event) => { 
@@ -205,7 +205,7 @@ const VideoScreen = () => {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://skywayapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`, {
+        const response = await fetch(`https://testcvapi.ntechagent.com/detail/get_applicant_for_agent?agentname=${agentName}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -274,7 +274,7 @@ const VideoScreen = () => {
                     <CardMedia
                       component="img"
                       height="440"
-                      image={video.personalimage ? `https://skywayapi.ntechagent.com/applicantimagetest/${video.personalimage}` : thumbnail}
+                      image={video.personalimage ? `https://testcvapi.ntechagent.com/applicantimagetest/${video.personalimage}` : thumbnail}
                       alt={video.name}
                       onClick={() => handleClickOpen(index)}
                       style={{
@@ -353,7 +353,7 @@ const VideoScreen = () => {
                     maxHeight: '80vh',
                     objectFit: 'cover',
                   }}
-                  src={`https://skywayapi.ntechagent.com/applicantimagetest/${filteredRows[selectedVideoIndex].video}`}
+                  src={`https://testcvapi.ntechagent.com/applicantimagetest/${filteredRows[selectedVideoIndex].video}`}
                 />
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '16px', marginBottom: "16px", width: "100%", padding: "10px" }}>
                   <div>

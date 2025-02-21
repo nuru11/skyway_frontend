@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://skywayapi.ntechagent.com/detail/tget-images?createdAt=2024-11-04T12:56:09.000Z`);
+        const response = await fetch(`https://testcvapi.ntechagent.com/detail/tget-images?createdAt=2024-11-04T12:56:09.000Z`);
         const result = await response.json();
         if (result.status === 'ok') {
           console.log('Fetched dataaaaaaa:', result.data);

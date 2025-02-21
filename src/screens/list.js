@@ -264,7 +264,7 @@ const [data, setData] = React.useState('');
     const fetchData = async () => {
       const token = localStorage.getItem('token');
       try {
-        const response = await fetch(`https://skywayapi.ntechagent.com/tt?agentname=${agentName}`, {
+        const response = await fetch(`https://testcvapi.ntechagent.com/tt?agentname=${agentName}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -307,7 +307,7 @@ const [data, setData] = React.useState('');
     const confirmDelete = window.confirm('Are you sure you want to delete this item?');
     if (confirmDelete) {
       try {
-        const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${id}?agentname=${agentName}`, {
+        const response = await fetch(`https://testcvapi.ntechagent.com/tget-images/${id}?agentname=${agentName}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -385,7 +385,7 @@ const [message, setMessage] = React.useState('');
 //   // }
 
 //   try {
-//     const response = await fetch('https://skywayapi.ntechagent.com/deletemultipeapplicants', {
+//     const response = await fetch('https://testcvapi.ntechagent.com/deletemultipeapplicants', {
 //       method: 'DELETE',
 //       headers: {
 //         'Content-Type': 'application/json',
@@ -429,7 +429,7 @@ const handleDeleteImages = async (e) => {
     const token = localStorage.getItem('token');
 
   try {
-    const response = await fetch(`https://skywayapi.ntechagent.com/deletemultipeapplicants?agentname=${agentName}`, {
+    const response = await fetch(`https://testcvapi.ntechagent.com/deletemultipeapplicants?agentname=${agentName}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -637,7 +637,7 @@ const handleDeleteImages = async (e) => {
     const token = localStorage.getItem('token');
 
     try {
-      const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
+      const response = await fetch(`https://testcvapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -723,7 +723,7 @@ const handleDeleteImages = async (e) => {
 
 
     try {
-      const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
+      const response = await fetch(`https://testcvapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the headers
@@ -775,7 +775,7 @@ const handleDeleteImages = async (e) => {
 
 
     try {
-      const response = await fetch(`https://skywayapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
+      const response = await fetch(`https://testcvapi.ntechagent.com/tget-images/${editData.id}?agentname=${agentName}`, {
         method: 'PUT',
          headers: {
           'Authorization': `Bearer ${token}`, // Include the token in the headers
